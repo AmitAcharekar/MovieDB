@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background-color: #f8f9fa; /* Neutral background */
+    }
+    
+    .container {
+      max-width: 800px; /* Limit container width */
+      margin: 0 auto; /* Center horizontally */
+      padding: 2rem;
+      background-color: #fff; /* White background for content */
+      border-radius: 4px; /* Rounded corners */
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Subtle shadow */
+    }
+    
+    h1, h2, h3 {
+      margin-bottom: 0.5rem;
+    }
+    
+    h1 {
+      text-align: center;
+      color: #007bff; /* Primary color */
+    }
+    
+    h2 {
+      color: #343a40; /* Darker text for better contrast */
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    li {
+      margin-bottom: 1rem;
+    }
+    
+    a {
+      text-decoration: none;
+      color: #007bff; /* Primary color for links */
+    }
+    
+    a:hover {
+      color: #ffc107; /* Secondary color on hover */
+    }
+    
+    .navigation {
+      background-color: #f0f0f0; /* Light gray for navigation */
+      padding: 1rem;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Dashboard</h1>
+    <h2>Welcome, {{ session['username'] }}!</h2>
+    <div class="navigation">
+      <h3>Actions:</h3>
+      <ul>
+        <li><a href="/audience/list_movies">List Movies</a></li>
+        <li><a href="/audience/add_movies">Add Favorite Movies</a></li>
+        <li><a href="/audience/view_movies">View Favorite Movies</a></li>
+        <li><a href="/audience/logout">Logout</a></li>
+      </ul>
+    </div>
+    </div>
+</body>
+</html>

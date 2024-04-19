@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif; /* Change font to Open Sans */
+      margin: 20px;
+      background-color: #f5f5f5;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2em;
+      color: #3498db; /* Blue heading */
+    }
+    
+    h2 {
+      text-align: center;
+      margin-bottom: 15px;
+      color: #e74c3c; /* Red welcome message */
+    }
+    
+    h3 {
+      margin-bottom: 10px;
+      color: #2ecc71; /* Green for "Actions" */
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex; /* Arrange list items horizontally */
+      justify-content: center; /* Center them horizontally */
+    }
+    
+    li {
+      margin-bottom: 5px;
+    }
+    
+    a {
+      text-decoration: none;
+      color: #333;
+      padding: 10px 20px; /* Add padding for better spacing */
+      border: 1px solid #ddd; /* Add a thin border */
+      border-radius: 5px; /* Rounded corners */
+      display: inline-block; /* Allow side-by-side display */
+      margin: 5px; /* Add some margin between links */
+    }
+    
+    a:hover {
+      color: #fff; /* Change color on hover */
+      background-color: #3498db; /* Add blue background on hover */
+      transition: 0.3s ease-in-out; /* Smooth transition effect */
+    }
+  </style>
+</head>
+<body>
+  <h1>Dashboard</h1>
+  <h2>Welcome, {{ session['username'] }}!</h2>
+  <h3>Actions:</h3>
+  <ul>
+    <li><a href="/db_manager/add_user">Add User</a></li>
+    <li><a href="/db_manager/delete_audience">Delete Audience</a></li>
+    <li><a href="/db_manager/view_directors">View Directors</a></li>
+    <li><a href="/db_manager/view_movies">View Movies</a></li>
+    <li><a href="/db_manager/view_average_rating">View Average Rating</a></li>
+    <li><a href="/db_manager/logout">Logout</a></li>
+  </ul>
+</body>
+</html>

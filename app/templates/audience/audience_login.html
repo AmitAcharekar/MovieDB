@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Audience Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      display: flex; /* Center content horizontally */
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh; /* Set minimum height for full viewport */
+      background-color: #f8f9fa; /* Light background color */
+    }
+    
+    form {
+      width: 300px; /* Set form width */
+      padding: 2rem;
+      border-radius: 4px;
+      background-color: #fff; /* White background for form */
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Subtle shadow */
+    }
+    
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    
+    input[type="text"],
+    input[type="password"] {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    
+    button[type="submit"] {
+      padding: 0.75rem 1rem;
+      background-color: #007bff; /* Primary color for button */
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <form method="POST" action="/audience/audience_login">
+    <h1>Audience Login</h1>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <button type="submit">Login</button>
+  </form>
+</body>
+</html>

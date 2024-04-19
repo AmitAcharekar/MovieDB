@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Movies</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    
+    input[type="text"],
+    input[type="submit"] {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100%;
+    }
+    
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    
+    .error {
+      color: red;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Add Movies</h1>
+  {% if error %}
+    <p class="error">{{ error }}</p>
+  {% endif %}
+  <form action="/audience/add_movies" method="POST">
+    <label for="session_id">ID:</label>
+    <input type="text" id="session_id" name="session_id" required><br><br>
+    <input type="submit" value="Add Movies">
+  </form>
+</body>
+</html>
